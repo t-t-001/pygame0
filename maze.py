@@ -47,7 +47,7 @@ def on_key_down(key):
                 player.y     +=  70
     if key == keys.LEFT:
         if location[1] >= 1:
-            if map_data[location[0][location[1]-1]] != 1:
+            if map_data[location[0]][location[1]-1] != 1:
                 location[1] -= 1
                 player.x    -= 70
     if key == keys.RIGHT:
