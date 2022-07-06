@@ -22,6 +22,10 @@ box    =  Actor('box'   ,topleft=(0,0))
 #出口の看板
 exit   =  Actor('exit'  ,topleft=(630,420))
 
+px      =  player.x
+py      =  player.y
+
+
 def draw():
     screen.clear()
     for y in range(7):
@@ -55,6 +59,12 @@ def on_key_down(key):
             if map_data[location[0]][location[1]+1] != 1:
                 location[1] += 1
                 player.x   +=  70 
+    if (player.x ==  exit.x) and (player.y == exit.y):
+        player.x = px
+        player.y = py
+        location[0] = 0
+        location[1] = 1
+
 
 pgzrun.go()
 
