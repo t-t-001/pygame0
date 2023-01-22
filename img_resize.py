@@ -1,5 +1,6 @@
 from PIL import Image
 
-img = Image.open('./images/spaceRockets_001.png')
-img_resize = img.resize((50,100))
-img_resize.save('./images/rocket.png')
+img = Image.open('./images/spaceShips_003.png')
+img_resize = img.resize((60,60))
+img_rotate = img.transpose(Image.ROTATE_180)
+img_rotate.save('./images/shooter.png')
